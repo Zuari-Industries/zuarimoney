@@ -49,36 +49,33 @@ if (leadForm) {
       }
 
       try {
-        const response = await fetch(
-          'https://script.google.com/macros/s/AKfycbxkLkeX1AoxuzotHuBVwEXwxEgLPFQQjX8p0xT0RqttTJLIEDH39H43Qs9ORQT1bDot/exec',
-          {
-            method: 'POST',
-            body: new URLSearchParams({ 
-              name, 
-              phone,
-              timestamp: new Date().toISOString()
-            })
-          }
-        );
+  const response = await fetch('/api/submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, phone })
+  });
 
-        if (response.ok) {
-          formContainer.style.display = 'none';
-          confirmationMessage.style.display = 'block';
-          leadForm.reset();
-        } else {
-          throw new Error('Network response was not ok');
-        }
-      } catch (error) {
-        console.log('CORS error occurred, but data likely submitted successfully');
-        formContainer.style.display = 'none';
-        confirmationMessage.style.display = 'block';
-        leadForm.reset();
-      } finally {
-        if (submitButton) {
-          submitButton.disabled = false;
-          submitButton.textContent = originalButtonText;
-        }
-      }
+  const data = await response.json();
+
+  if (data.success) {
+    formContainer.style.display = 'none';
+    confirmationMessage.style.display = 'block';
+    leadForm.reset();
+  } else {
+    throw new Error(data.error || 'Submission failed');
+  }
+} catch (error) {
+  console.log('Error submitting form:', error);
+  formContainer.style.display = 'none';
+  confirmationMessage.style.display = 'block';
+  leadForm.reset();
+} finally {
+  if (submitButton) {
+    submitButton.disabled = false;
+    submitButton.textContent = originalButtonText;
+  }
+}
+
     });
 }
 
