@@ -1337,3 +1337,393 @@ section.visible { opacity: 1; transform: translateY(0);margin-top: 2px; }
     min-height: 40px;
     font-size: clamp(14px, 1.5vw, 16px);
 }
+
+/* Enhanced Responsive CSS for Smaller Laptops (768px - 1500px) */
+
+/* Base adjustments for laptop screens */
+@media (min-width: 769px) and (max-width: 1500px) {
+    .container {
+        max-width: 95%;
+        padding: 0 30px;
+    }
+    
+    /* Hero section adjustments */
+    .hero {
+        padding: 120px 0 80px;
+        min-height: 90vh;
+    }
+    
+    .hero h1 {
+        font-size: clamp(2.2rem, 4vw, 3.0rem);
+        margin-top: -200px;
+        text-align: center;
+        line-height: 1.1;
+    }
+    
+    .hero p {
+        font-size: clamp(1rem, 1.8vw, 1.2rem);
+        max-width: 80%;
+        margin: 0 auto;
+        margin-top: 20px;
+        text-align: center;
+        line-height: 1.6;
+    }
+    
+    /* Header adjustments */
+    .logo {
+        font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+    }
+    
+    .logo img {
+        height: clamp(35px, 5vw, 50px);
+        margin-left: 0;
+    }
+    
+    .header-buttons {
+        gap: 12px;
+    }
+    
+    .hero-header .cta-button,
+    .download-button {
+        padding: clamp(10px, 1.5vw, 14px) clamp(20px, 3vw, 32px);
+        font-size: clamp(0.8rem, 1.2vw, 1rem);
+        margin-right: 0;
+    }
+    
+    /* Section spacing */
+    section {
+        padding: clamp(50px, 8vw, 80px) 0;
+    }
+    
+    h1 {
+        font-size: clamp(2.2rem, 4vw, 3.0rem);
+    }
+    
+    h2 {
+        font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    }
+    
+    h3 {
+        font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    }
+    
+    /* Two column layout adjustments */
+    .two-column-layout {
+        gap: clamp(30px, 5vw, 60px);
+    }
+    
+    .column-image img {
+        width: clamp(120%, 130%, 150%);
+    }
+    
+    /* Fund explorer section */
+    .fund-explorer-section {
+        margin: 0 clamp(15px, 3vw, 20px);
+        padding: clamp(30px, 5vw, 60px) clamp(20px, 4vw, 40px);
+    }
+    
+    .tab-button {
+        padding: clamp(10px, 1.5vw, 12px) clamp(20px, 3vw, 25px);
+        font-size: clamp(0.9rem, 1.2vw, 1rem);
+    }
+    
+    .funds-table th,
+    .funds-table td {
+        padding: clamp(15px, 2.5vw, 20px);
+        font-size: clamp(0.9rem, 1.1vw, 1rem);
+    }
+    
+    /* Graph and simulator layout */
+    .explorer-layout {
+        gap: clamp(20px, 3vw, 28px);
+    }
+    
+    .graph-container {
+        width: 100% !important;
+        height: clamp(400px, 60vw, 625px) !important;
+        padding: clamp(20px, 3vw, 25px);
+    }
+    
+    .simulator-container {
+        padding: clamp(20px, 3vw, 25px);
+    }
+    
+    .simulator-title {
+        font-size: clamp(1.2rem, 2vw, 1.5rem);
+    }
+    
+    .category-btn {
+        padding: clamp(8px, 1.2vw, 10px);
+        font-size: clamp(0.8rem, 1.1vw, 0.9rem);
+    }
+    
+    .input-group input,
+    .input-group select {
+        padding: clamp(10px, 1.5vw, 12px);
+        font-size: clamp(0.9rem, 1.1vw, 1rem);
+    }
+    
+    .result-amount {
+        font-size: clamp(1.8rem, 3vw, 2.2rem);
+    }
+    
+    /* Testimonials */
+    .testimonials-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: clamp(20px, 3vw, 30px);
+    }
+    
+    .testimonial-card {
+        padding: clamp(20px, 3vw, 30px);
+    }
+    
+    /* Webinar section */
+    .webinar-section {
+        margin: 2rem clamp(15px, 3vw, 20px);
+        padding: clamp(1.5rem, 3vw, 2rem);
+        flex-direction: row;
+    }
+    
+    .webinar-content h2 {
+        font-size: clamp(1.5rem, 2.5vw, 2rem);
+        margin-left: clamp(-50px, -8vw, -74px);
+    }
+    
+    .webinar-subtitle {
+        margin-left: clamp(200px, 35vw, 330px);
+    }
+    
+    .webinar-card {
+        min-width: clamp(220px, 30vw, 250px);
+        padding: clamp(1.2rem, 2vw, 1.5rem);
+    }
+    
+    .countdown span {
+        font-size: clamp(1.5rem, 2.5vw, 2rem);
+    }
+    
+    /* Roadmap section */
+    .roadmap-item {
+        width: clamp(200px, 25vw, 250px);
+        padding: clamp(15px, 2.5vw, 20px);
+    }
+    
+    .roadmap-icon {
+        font-size: clamp(2rem, 3vw, 2.5rem);
+    }
+    
+    /* CTA buttons */
+    .cta-button,
+    .cta-button-center {
+        padding: clamp(12px, 1.8vw, 14px) clamp(24px, 4vw, 32px);
+        font-size: clamp(0.9rem, 1.2vw, 1rem);
+    }
+    
+    /* Accordion */
+    .accordion-header {
+        padding: clamp(15px, 2.5vw, 20px) clamp(20px, 3.5vw, 25px);
+    }
+    
+    .accordion-header strong {
+        font-size: clamp(1.1rem, 1.5vw, 1.2rem);
+    }
+    
+    .accordion-content p {
+        padding: clamp(15px, 2.5vw, 20px) clamp(20px, 3.5vw, 25px);
+    }
+    
+    /* Video placeholder */
+    .video-placeholder-small video {
+        width: clamp(800px, 90vw, 1020px);
+    }
+    
+    /* Final CTA */
+    .final-cta {
+        padding: clamp(60px, 8vw, 80px) 0;
+    }
+    
+    /* Modal content */
+    .modal-content {
+        max-width: clamp(350px, 50vw, 420px);
+        padding: clamp(30px, 5vw, 40px);
+    }
+    
+    /* Bottom bar */
+    .bottom-bar-form input {
+        width: clamp(180px, 25vw, 220px);
+        padding: clamp(10px, 1.5vw, 12px);
+    }
+    
+    .bottom-bar-form button {
+        padding: clamp(10px, 1.5vw, 12px) clamp(20px, 3vw, 25px);
+    }
+}
+
+/* Specific adjustments for medium laptops (992px - 1200px) */
+@media (min-width: 993px) and (max-width: 1200px) {
+    .hero h1 {
+        margin-top: -180px;
+        font-size: 2.6rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+        max-width: 75%;
+        margin-top: 15px;
+    }
+    
+    .graph-container {
+        height: 500px !important;
+    }
+    
+    .webinar-content h2 {
+        margin-left: -60px;
+    }
+    
+    .webinar-subtitle {
+        margin-left: 250px;
+    }
+}
+
+/* Specific adjustments for smaller laptops (769px - 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .hero h1 {
+        margin-top: -160px;
+        font-size: 2.4rem;
+    }
+    
+    .hero p {
+        font-size: 1.05rem;
+        max-width: 85%;
+        margin-top: 10px;
+    }
+    
+    .explorer-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .graph-container {
+        height: 450px !important;
+    }
+    
+    .simulator-container {
+        margin-top: 0;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .webinar-section {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .webinar-content h2 {
+        margin-left: 0;
+        font-size: 1.8rem;
+    }
+    
+    .webinar-subtitle {
+        margin-left: 0;
+    }
+    
+    .webinar-card {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .roadmap-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .roadmap-item {
+        width: 200px;
+    }
+}
+
+/* Adjustments for very small laptops (769px - 900px) */
+@media (min-width: 769px) and (max-width: 900px) {
+    .hero {
+        padding: 100px 0 60px;
+    }
+    
+    .hero h1 {
+        margin-top: -140px;
+        font-size: 2.2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+    
+    .fund-explorer-section {
+        padding: 40px 25px;
+    }
+    
+    .tabs-nav {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .tab-button {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+    
+    .graph-container {
+        height: 400px !important;
+        padding: 20px;
+    }
+    
+    .simulator-inputs {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Ensure smooth transitions between breakpoints */
+@media (min-width: 769px) and (max-width: 1500px) {
+    * {
+        transition: font-size 0.2s ease, padding 0.2s ease, margin 0.2s ease;
+    }
+    
+    /* Prevent horizontal scrolling */
+    body {
+        overflow-x: hidden;
+    }
+    
+    /* Ensure all images are responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Better button hover effects for laptops */
+    .cta-button:hover,
+    .download-button:hover,
+    .tab-button:hover {
+        transform: translateY(-2px);
+    }
+    
+    /* Improve readability */
+    p {
+        line-height: 1.6;
+    }
+    
+    /* Better spacing for lists */
+    .why-us-list li {
+        margin-bottom: 20px;
+        font-size: clamp(1rem, 1.3vw, 1.1rem);
+    }
+    
+    .why-us-list i {
+        font-size: clamp(1.3rem, 2vw, 1.5rem);
+    }
+}
