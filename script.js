@@ -11,7 +11,7 @@ if (downloadButton) {
     downloadButton.addEventListener('click', () => {
         // Method 1: Direct file download (recommended)
         const link = document.createElement('a');
-        link.href = 'assets/Zuari-Finserv-Mutual-Fund-Starter-Kit.pdf'; // Your file path
+        link.href = 'assets/pdfforzfl.pdf'; // Your file path
         link.download = 'Zuari-Finserv-Mutual-Fund-Starter-Kit.pdf';
         document.body.appendChild(link);
         link.click();
