@@ -387,7 +387,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // JavaScript Countdown
-const targetDate = new Date("2025-08-20T10:00:00").getTime();
+const targetDate = new Date("2026-08-20T10:00:00").getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();
